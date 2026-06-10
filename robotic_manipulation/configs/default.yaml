@@ -1,0 +1,4 @@
+# Configuration defaults
+model_path: "openvla/openvla-7b"
+position_threshold: 0.05
+log_path: "error_log.json"
