@@ -50,7 +50,13 @@ mongoose.connect(process.env.MONGODB_URI)
 // Routes
 app.use('/api', apiRoutes);
 
+// Root route for health check / status
+app.get('/', (req, res) => {
+  res.json({ message: "Parichaya Tours & Travels Backend API is running!" });
+});
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
